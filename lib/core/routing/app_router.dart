@@ -1,4 +1,5 @@
 import 'package:crm/core/routing/app_routes.dart';
+import 'package:crm/features/auth/ui/auth_screen.dart';
 import 'package:flutter/material.dart';
 
 class AppRouter {
@@ -9,11 +10,7 @@ class AppRouter {
     switch (settings.name) {
       case AppRoutes.auth:
         return MaterialPageRoute(
-          builder: (_) => const Scaffold(
-            body: Center(
-              child: Text('Auth'),
-            ),
-          ),
+          builder: (_) => const AuthScreen(),
         );
       case AppRoutes.home:
         return MaterialPageRoute(
