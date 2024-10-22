@@ -7,8 +7,8 @@ import 'package:flutter/material.dart';
 const double WIDTH = 380;
 const double HEIGHT = 55;
 
-class AppButton extends StatelessWidget {
-  const AppButton(
+class AppTextButton extends StatelessWidget {
+  const AppTextButton(
       {super.key,
       required this.text,
       required this.onPressed,
