@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 extension Navigation on BuildContext {
@@ -22,5 +23,23 @@ extension StringExtensions on String {
 
   bool isPhoneNumber() {
     return RegExp(r"^\+?0[0-9]{10}$").hasMatch(this);
+  }
+
+  bool isEmail() {
+    return RegExp(
+            r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+        .hasMatch(this);
+  }
+}
+
+extension ExceptionExtensions on Exception {
+  String toUserFriendlyMessage() {
+    if (this is FirebaseAuthException) {
+      return (this as FirebaseAuthException).message!;
+    } else if (this is FirebaseException) {
+      return (this as FirebaseException).message!;
+    } else {
+      return this.toString().replaceAll('Exception: ', '');
+    }
   }
 }
