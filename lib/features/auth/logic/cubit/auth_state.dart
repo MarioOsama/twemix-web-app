@@ -14,7 +14,9 @@ final class AuthLoggedIn extends AuthState {
   AuthLoggedIn(this.userModel);
 
   @override
-  void onStateReaching(BuildContext context) {}
+  void onStateReaching(BuildContext context) {
+    context.pushNamed(AppRoutes.home);
+  }
 }
 
 final class AuthError extends AuthState {

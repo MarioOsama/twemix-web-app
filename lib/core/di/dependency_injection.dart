@@ -5,6 +5,7 @@ import 'package:crm/core/networking/firestore_factory.dart';
 import 'package:crm/core/networking/firestore_services.dart';
 import 'package:crm/features/auth/data/repos/auth_repo.dart';
 import 'package:crm/features/auth/logic/cubit/auth_cubit.dart';
+import 'package:crm/features/home/logic/cubit/home_cubit.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get_it/get_it.dart';
 
@@ -26,4 +27,5 @@ void setupGetIt() {
 
   // Cubits
   getIt.registerLazySingleton<AuthCubit>(() => AuthCubit(getIt()));
+  getIt.registerLazySingleton<HomeCubit>(() => HomeCubit());
 }

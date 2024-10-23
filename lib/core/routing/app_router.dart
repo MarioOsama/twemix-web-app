@@ -2,6 +2,8 @@ import 'package:crm/core/di/dependency_injection.dart';
 import 'package:crm/core/routing/app_routes.dart';
 import 'package:crm/features/auth/logic/cubit/auth_cubit.dart';
 import 'package:crm/features/auth/ui/auth_screen.dart';
+import 'package:crm/features/home/logic/cubit/home_cubit.dart';
+import 'package:crm/features/home/ui/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -20,10 +22,9 @@ class AppRouter {
         );
       case AppRoutes.home:
         return MaterialPageRoute(
-          builder: (_) => const Scaffold(
-            body: Center(
-              child: Text('Home'),
-            ),
+          builder: (_) => BlocProvider<HomeCubit>(
+            create: (context) => HomeCubit(),
+            child: const HomeScreen(),
           ),
         );
       default:
