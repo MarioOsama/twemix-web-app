@@ -22,7 +22,7 @@ class ErrorHandler {
             message: 'Invalid email address', type: ErrorType.auth);
       case 'invalid-credential':
         return ErrorModel(
-            message: 'Username or password is incorrect', type: ErrorType.auth);
+            message: 'Email or password is incorrect', type: ErrorType.auth);
       case 'user-not-found':
         return ErrorModel(message: 'User not found', type: ErrorType.auth);
       case 'operation-not-allowed':

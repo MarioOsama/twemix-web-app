@@ -8,6 +8,12 @@ abstract class AppTextStyles {
         fontWeight: FontWeight.w600,
         fontFamily: 'Kufam',
       );
+  static TextStyle font24WhiteSemiBold(BuildContext context) => const TextStyle(
+        fontSize: 24,
+        color: AppColors.white,
+        fontWeight: FontWeight.w600,
+        fontFamily: 'Kufam',
+      );
   static TextStyle font24BlackSemiBold(BuildContext context) => const TextStyle(
         fontSize: 24,
         color: AppColors.black,

@@ -16,7 +16,7 @@ class CRMApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'CRM App',
-        initialRoute: AppRoutes.auth,
+        initialRoute: AppRoutes.home,
         onGenerateRoute: appRouter.onGenerateRoute,
       ),
     );
